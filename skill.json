@@ -1,0 +1,25 @@
+{
+  "name": "genpark-personal-agent-sensory-deprivation-auditory-visual-hygiene-skill",
+  "version": "1.0.0",
+  "description": "Calculates Sensory Overload Index (SOI), evaluates thalamocortical sensory gating burden, and prescribes Restricted Environmental Stimulation Therapy (REST) doses.",
+  "tools": [
+    {
+      "name": "calculate_sensory_overload_burden",
+      "description": "Calculates Sensory Overload Index (SOI: 0-100) combining photopic, acoustic, and attentional vectors.",
+      "parameters": {
+        "daily_screen_time_hours": "float (default 8.5)",
+        "average_ambient_decibels": "float (default 68.0)",
+        "daily_notification_interrupts": "int (default 85)",
+        "high_contrast_blue_light_hours": "float (default 4.5)"
+      }
+    },
+    {
+      "name": "prescribe_sensory_deprivation_rest_dose",
+      "description": "Prescribes customized Restricted Environmental Stimulation Therapy (REST) protocol.",
+      "parameters": {
+        "soi_score": "float (default 68.0)",
+        "available_time_minutes": "int (default 45)"
+      }
+    }
+  ]
+}
